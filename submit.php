@@ -47,7 +47,7 @@ if ($status=='OK') {
                     $_SERVER['HTTP_ACCEPT_LANGUAGE'], 
                     'Referer: '.$_SERVER['HTTP_REFERER']));
                     
-     $msgtext=implode('<br>', array("Email: ${emailaddr}", "Время регистрации: ${dtime}", "Служебная информация:<br>${serviceinfo}"));
+     $msgtext=implode('<br>', array("Email: ${emailaddr}", "Registration time: ${dtime}", "User info:<br>${serviceinfo}"));
      $msgtext=str_replace("\t", "<br>", $msgtext);
      $response=sendemail($email_recipient , $msgtext);
     }
